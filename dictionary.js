@@ -1,4 +1,4 @@
-var dictionary = {"hebrew":{"hello":"\u05e9\u05dc\u05d5\u05dd","goodbye":"\u05dc\u05d4\u05ea\u05e8\u05d0\u05d5\u05ea","love":"\u05d0\u05d4\u05d1\u05d4","submit":"\u05dc\u05da \u05e2\u05dc \u05d6\u05d4"},"italian":{"hello":"ciao","goodbye":"arrivederci","love":"amore","submit":"vai"}};
+var dictionary = {"italian":{"love":"amore","submit":"vai","hello":"ciao","goodbye":"arrivederci"},"hebrew":{"love":"\u05d0\u05d4\u05d1\u05d4","submit":"\u05dc\u05da \u05e2\u05dc \u05d6\u05d4","hello":"\u05e9\u05dc\u05d5\u05dd","goodbye":"\u05dc\u05d4\u05ea\u05e8\u05d0\u05d5\u05ea"}};
 function dictkey_replacer() {
 
 	var current_dictionary = dictionary[current_language];  // you have to set current_language on your HTML!
