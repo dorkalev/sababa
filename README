@@ -1,0 +1,45 @@
+SABABA - a way too simple to translate your buttons and short-texts
+
+SABABA allows you to manage a key-value translation dictionary of different languages for your multi-lingual site needs
+
+> if you need to have a button/title in a different language according to user's lang...
+
+WHAT IT DOES?
+
+you run "ruby sababa.rb" -> it takes dictionaries/*.txt files (the key-value dictionary) and jsons them into dictionary.js
+
+THATS WHERE RUBY USAGE ENDS <<
+
+on the client side's HTML HEAD tag you include:
+
+  <script src="/dictionary.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+    var current_language = "italian";  
+  </script>
+
+you manage current_language variable according to user's langauge
+
+and where translated text is needed you use the amazing <dictkey> tag:
+
+    <dictkey>hello</dictkey>
+
+or 'dictkeyatt' attribute that indicates which attribute of the element contains a value that should be translated:
+ 
+    <input type="submit" value="submit" dictkeyatt="value" />
+
+you will see that:
+    <dictkey>hello</dictkey>  CHANGES TO  <dictkey>ciao</dictkey>
+    
+and
+    <input type="submit" value="submit" dictkeyatt="value" />  CHANGES TO  <input type="submit" value="vai" dictkeyatt="value" />
+
+DEMO
+
+you can run a simple demo app:
+
+  ruby demo.rb
+
+EPILOGUE
+
+As always, I am more interested in showing a proof of concept rather than creating a super-does-it-all tool
+I hope you like the concept and will find it useful.
